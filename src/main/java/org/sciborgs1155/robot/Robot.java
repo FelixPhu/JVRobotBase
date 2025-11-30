@@ -6,3 +6,9 @@ public class Robot extends CommandRobot {
     super(0.02);
   }
 }
+
+Drive drive = new Drive();
+
+private void configureBindings() {
+	drive.setDefaultCommand(drive.drive(driver::getLeftY, driver::getRightY));
+}
